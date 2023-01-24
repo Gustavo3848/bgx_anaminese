@@ -1,0 +1,19 @@
+{
+  "name": "anaminese",
+  "version": "1.0.0",
+  "description": "Software By BGX Solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "author": "Gustavo Bovollato",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3"
+  }
+}
