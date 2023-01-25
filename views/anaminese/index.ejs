@@ -1,15 +1,19 @@
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                  <label for="inputPassword2" class="sr-only">Buscar</label>
-                  <input type="pesquisa" class="form-control" id="inputPassword2" placeholder="buscar">
-                </div>
-              </form>
+  <div class="row">
+    <div class="col mt-5">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Anamineses</h5>
+          <div class="d-grid gap-1">
+            <input type="text" id="search-input" placeholder="buscar">
+          </div>
+          <div class="list-group mt-2" id="search-data">
+            <% itens.forEach(function(item) { %>
+            <a href="./anaminese/visualizar/<%= item.id %>" class="list-group-item list-group-item-action"><%= item.nome %></a>
+            <% }); %>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="row">
-        
-    </div>
+  </div>
 </div>

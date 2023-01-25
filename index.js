@@ -4,7 +4,10 @@ const session = require('express-session');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const anamineseRoute = require('./routes/anaminese.js');
+const authRoute = require('./routes/auth.js');
+
 const auth = require('./config/auth');
+const bcrypt = require("bcryptjs")
 //Session
 app.use(session({
     secret: "Obrigado Deus",
@@ -13,6 +16,7 @@ app.use(session({
 
 app.use(function (req, res, next) {
     res.locals.user = req.session.user || undefined
+    res.locals.id = req.session.userID || undefined
     next();
 })
 //Express Layouts
@@ -30,13 +34,9 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
     res.render("./login/login.ejs")
 })
-app.post('/login/auth', (req, res) => {
-    const username = req.body.user
-    const password = req.body.password
+app.use('/login', authRoute)
 
-})
-
-app.use('/anaminese',anamineseRoute);
+app.use('/anaminese', auth, anamineseRoute);
 app.use(auth)
 const port = 3000;
 
