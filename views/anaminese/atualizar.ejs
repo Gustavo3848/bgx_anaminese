@@ -3,72 +3,73 @@
         <div class="col mt-5">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Incluir Anaminese</h5>
-                    <form method="post" action="/anaminese/incluir">
+                    <h5 class="card-title text-center">Atualizar Anaminese</h5>
+                    <form method="post" action="/anaminese/atualizar/save">
+                        <input type="text" hidden value="<%= anaminese[0].id %>" name="id">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nome</label>
                             <input type="text" name="nome" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" required>
+                                aria-describedby="emailHelp" required value="<%= anaminese[0].nome %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Data de nascimento</label>
                             <input type="date" name="_2" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" value="<%= date.toISOString().substr(0,10) %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Profissão</label>
                             <input type="text" name="_3" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" value="<%= anaminese[0]._3 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Queixa principal</label>
                             <input type="text" name="_4" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" value="<%= anaminese[0]._4 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Gestante?</label>
                             <input type="text" name="_5" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" value="<%= anaminese[0]._5 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Lesão ou fratura, osteoporose?</label>
                             <input type="text" name="_6" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" value="<%= anaminese[0]._6 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Cirurgia?</label>
                             <input type="text" name="_7" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" value="<%= anaminese[0]._7 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Possui Pressão Alta, Diabetes,
                                 Convulsão, Labirintite, Tendinite, Burcite, Pedra no rim ou vesícula, Tumores, alguma
                                 Alergia?</label>
-                            <input type="text" name="_8" class="form-control" id="exampleInputPassword1">
+                            <input type="text" name="_8" class="form-control" id="exampleInputPassword1" value="<%= anaminese[0]._8 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Tratamento Físico ou
                                 Psicológico?</label>
-                            <input type="text" name="_9" class="form-control" id="exampleInputPassword1">
+                            <input type="text" name="_9" class="form-control" id="exampleInputPassword1" value="<%= anaminese[0]._9 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Trombo ou Trombose?</label>
-                            <input type="text" name="_10" class="form-control" id="exampleInputPassword1">
+                            <input type="text" name="_10" class="form-control" id="exampleInputPassword1" value="<%= anaminese[0]._10 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Pressão Forte, Médio ou Leve?</label>
-                            <input type="text" name="_11" class="form-control" id="exampleInputPassword1">
+                            <input type="text" name="_11" class="form-control" id="exampleInputPassword1" value="<%= anaminese[0]._11 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Música de preferência?</label>
-                            <input type="text" name="_12" class="form-control" id="exampleInputPassword1">
+                            <input type="text" name="_12" class="form-control" id="exampleInputPassword1" value="<%= anaminese[0]._12 %>">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Observações</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="_13"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="_13" value="<%= anaminese[0]._13 %>"></textarea>
                         </div>
                         <div class="d-grid gap-1">
-                            <button type="submit" class="btn btn-primary">Salvar</button>
+                            <button type="submit" class="btn btn-primary">Atualizar</button>
                         </div>
                     </form>
                 </div>

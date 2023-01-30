@@ -1,94 +1,113 @@
 <div class="container">
-    <div class="row">
-      <div class="col mt-5">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title text-center">Anaminese</h5>
-            <ol class="list-group list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Nome</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Data de Nascimento</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Profissão</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Queixa principal</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Gestante?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Lesão ou fratura, osteoporose?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Cirurgia?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Possui Pressão Alta, Diabetes,
-                        Convulsão, Labirintite, Tendinite, Burcite, Pedra no rim ou vesícula, Tumores, alguma
-                        Alergia?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Tratamento Físico ou
-                        Psicológico?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Trombo ou Trombose?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Pressão Forte, Médio ou Leve?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Música de preferência?</div>
-                    Cras justo odio
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-start">
-                  <div class="ms-2 me-auto">
-                    <div class="fw-bold">Observações</div>
-                    Cras justo odio
-                  </div>
-                </li>
-              </ol>
+  <div class="row">
+    <div class="col mt-5">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Anaminese</h5>
+          <div class="mt-2 mb-2 text-end">
+            <a class="btn btn-warning" href="/anaminese/atualizar/<%= anaminese[0].id %>" role="button">Atualizar</a>
+            <button class="btn btn-danger" href="/anaminese/delete/<%= anaminese[0].id %>" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Excluir</button>
           </div>
+          <ol class="list-group list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Nome</div>
+                <%= anaminese[0].nome %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Data de Nascimento</div>
+                <%= anaminese[0]._2 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Profissão</div>
+                <%= anaminese[0]._3 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Queixa principal</div>
+                <%= anaminese[0]._4 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Gestante?</div>
+                <%= anaminese[0]._5 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Lesão ou fratura, osteoporose?</div>
+                <%= anaminese[0]._6 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Cirurgia?</div>
+                <%= anaminese[0]._7 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Possui Pressão Alta, Diabetes,
+                  Convulsão, Labirintite, Tendinite, Burcite, Pedra no rim ou vesícula, Tumores, alguma
+                  Alergia?</div>
+                <%= anaminese[0]._8 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Tratamento Físico ou
+                  Psicológico?</div>
+                <%= anaminese[0]._9 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Trombo ou Trombose?</div>
+                <%= anaminese[0]._10 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Pressão Forte, Médio ou Leve?</div>
+                <%= anaminese[0]._11 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Música de preferência?</div>
+                <%= anaminese[0]._12 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Observações</div>
+                <%= anaminese[0]._13 %>
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
   </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmar exclusão?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a class="btn btn-danger" href="/anaminese/delete/<%= anaminese[0].id %>" role="button">Confirmar</a>
+      </div>
+    </div>
+  </div>
+</div>
