@@ -21,8 +21,8 @@ class usuarioModel {
         }
     }
     async register() {
-        var username = "admin"
-        var senha = "admin"
+        var username = "caroline.shuster"
+        var senha = "@n@minese"
         try {
             // Hash the password
             const salt = await bcrypt.genSalt(10);
