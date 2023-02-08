@@ -17,6 +17,7 @@ app.use(session({
 app.use(function (req, res, next) {
     res.locals.user = req.session.user || undefined
     res.locals.id = req.session.userID || undefined
+    res.writeHead(200, {'Content-Type': 'text/html'});
     next();
 })
 //Express Layouts
