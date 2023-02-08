@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const http = require('http');
 const session = require('express-session');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
@@ -17,7 +18,6 @@ app.use(session({
 app.use(function (req, res, next) {
     res.locals.user = req.session.user || undefined
     res.locals.id = req.session.userID || undefined
-    res.writeHead(200, {'Content-Type': 'text/html'});
     next();
 })
 //Express Layouts
@@ -41,7 +41,6 @@ app.use('/anaminese', auth, anamineseRoute);
 app.use(auth)
 const port = 3302;
 
-app.listen(port, function () {
-    console.log("Servidor rodando...")
-});
+var server = http.createServer(app);
+server.listen(port);
 
