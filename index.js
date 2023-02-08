@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path')
 const http = require('http');
 const session = require('express-session');
 const expressLayouts = require('express-ejs-layouts');
@@ -25,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 //Public Static
-app.use('/static',express.static(__dirname + 'public'));
+app.use('/static',express.static(path.join(__dirname, 'public')));
 app.use('/node_modules', express.static('node_modules'));
 app.use(bodyParser.urlencoded({ extended: true }))
 app.get('/', (req, res) => {
