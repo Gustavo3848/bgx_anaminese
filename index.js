@@ -38,7 +38,7 @@ app.use('/login', authRoute)
 
 app.use('/anaminese', auth, anamineseRoute);
 app.use(auth)
-const port = 3000;
+const port = 3302;
 
 app.listen(port, function () {
     console.log("Servidor rodando...")
