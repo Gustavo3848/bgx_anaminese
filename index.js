@@ -25,8 +25,7 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 //Public Static
-app.use(express.static('public'));
-app.use('/static',express.static(__dirname + '/public'));
+app.use('/static',express.static(__dirname + 'public'));
 app.use('/node_modules', express.static('node_modules'));
 app.use(bodyParser.urlencoded({ extended: true }))
 app.get('/', (req, res) => {
