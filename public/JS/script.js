@@ -11,3 +11,11 @@ inputField.addEventListener('input', () => {
     }
   }
 });
+
+
+var element = document.getElementById("meses");
+var condition = document.getElementById("gestante");
+var value = condition.options[condition.selectedIndex].value;
+if (value == "Não") {
+  element.setAttribute("disable");
+}
