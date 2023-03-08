@@ -6,7 +6,8 @@
           <h5 class="card-title text-center">Anaminese</h5>
           <div class="mt-2 mb-2 text-end">
             <a class="btn btn-warning" href="/anaminese/atualizar/<%= anaminese[0].id %>" role="button">Atualizar</a>
-            <button class="btn btn-danger" href="/anaminese/delete/<%= anaminese[0].id %>" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Excluir</button>
+            <button class="btn btn-danger" href="/anaminese/delete/<%= anaminese[0].id %>" role="button"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">Excluir</button>
           </div>
           <ol class="list-group list-group">
             <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -31,6 +32,15 @@
               <div class="ms-2 me-auto">
                 <div class="fw-bold">Queixa principal</div>
                 <%= anaminese[0]._4 %>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Gestante?</div>
+                <%= anaminese[0]._5 %>
+                  <% if(anaminese[0]._5 == "Sim"){ %>
+                    - <%= anaminese[0]._14 %> meses
+                  <% } %>
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
